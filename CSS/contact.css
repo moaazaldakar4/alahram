@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@200;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(93, 3, 90)); /* Gradient background */
+}
+
+body, input, textarea, a {
+    font-family: 'Rubik', sans-serif;
+}
+
+#section-wrapper {
+    width: 100%;
+    padding: 10px;
+}
+
+.box-wrapper {
+    position: relative;
+    display: table;
+    width: 1100px;
+    margin: auto;
+    margin-top: 35px;
+    border-radius: 30px;
+}
+
+.info-wrap {
+    width: 35%;
+    height: 551px;
+    padding: 40px;
+    float: left;
+    display: block;
+    border-radius: 0px 30px 30px 0px;
+    background: rgba(157, 39, 141, 0.071); /* Semi-transparent blue background */
+    backdrop-filter: blur(10px); /* Apply blur to create the glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for the glass effect */
+    color: #fff;
+}
+
+.info-sub-title {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 17px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+}
+
+.info-details {
+    list-style: none;
+    margin: 60px 0px;
+}
+
+.info-details li {
+    margin-top: 25px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.info-details li i {
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: #000;
+}
+
+.info-details li a {
+    color: #fff;
+    text-decoration: none;
+
+}
+.info-title{
+    text-align: center;
+    font-size: 3rem;
+}
+.form-title{
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+
+.social-icons {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons li i {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 22%;
+    margin: 0px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.social-icons li i:hover {
+    background: #551477;
+    color: #ffffff;
+    border-radius: 50%;
+    transform: scale(1.1);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.form-wrap {
+    width: 35%;
+    height: 551px;
+    padding: 40px;
+    float: left;
+    display: block;
+    border-radius: 30px 0px 0px 30px;
+    background-color: #fff;
+}
+
+.form_title {
+    text-align: left;
+    margin-right: 23px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+.form-fields {
+    display: table;
+    width: 100%;
+    padding: 15px 5px 5px 5px;
+}
+
+.form-fields input, .form-fields textarea {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+    width: 100%;
+}
+
+.form-fields textarea {
+    height: 100px;
+    resize: none;
+}
+
+.form-group {
+    width: 60%;
+    float: right;
+    padding: 0px 20px;
+    margin: 5px 5px;
+    border-radius: 5rem;
+    box-shadow: 
+        inset 6px 6px 12px rgba(0, 0, 0, 0.275), /* Darker shadow for depth */
+        inset -6px -6px 12px rgba(255, 255, 255, 0.493), /* Lighter shadow for highlight */
+        inset 1px 1px 3px rgba(0, 0, 0, 0.579); /* Subtle shadow for additional depth */
+}
+
+
+
+.form-fields .form-group:last-child {
+    width: 96%;
+}
+
+.submit-button {
+    width: 96%;
+    height: 60px;
+    margin: 0px 12px;
+    border-radius: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    background-color:#000000;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+    transition: 0.5s;
+}
+
+.submit-button:hover {
+    background: #d17efe;
+    color: #000;
+}
+/* Responsive Styles (for smaller screens) */
+@media only screen and (max-width: 767px) {
+    #section-wrapper {
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        height: 100vh; /* Make the section-wrapper fit the viewport height */
+        overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+    
+    .box-wrapper {
+        width: 100%;
+        padding: 0 10px;
+        flex: 1; /* Allow the box-wrapper to grow and fill the space */
+    }
+    
+    .info-wrap, .form-wrap {
+        width: 100%;
+        height: 100%; /* Adjust as needed, or use min-height if necessary */
+
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .info-wrap {
+        border-radius: 30px 30px 0px 0px; /* Rounded corners at the bottom */
+        margin-top: 50rem;
+        background: rgba(157, 39, 141, 0.071); /* Semi-transparent blue background */
+    }
+
+    .form-wrap {
+        border-radius: 0px 0px 30px 30px; /* Rounded corners at the top */
+    }
+
+    .form-group {
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+
+    .submit-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .form-fields {
+        padding: 0;
+    }
+
+    .info-details {
+        text-align: right; /* Center the info details */
+        margin: 20px 0;
+    }
+    .info-title{
+        text-align: center;
+        font-size: 5rem;
+    }
+    .form-title{
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .social-icons {
+        text-align: center; /* Center the social icons */
+        margin: 20px 0;
+    }
+    .social-icons li i{
+    font-size: 3rem;
+
+    }
+    .info-details li {
+        margin-top: 25px;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .social-icons li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+}
+

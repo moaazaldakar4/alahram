@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@200;400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border: none;
+    outline:none;
+    scroll-behavior: smooth;
+    
+}
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+    :root {
+        --bg-color: #1f242d;
+        --second-bg-color:#323946;
+        --text-color:#fff;
+        --main-color:#279EFF;
+
+    }
+html{
+    font-size: 75%;
+    overflow-x:hidden;
+    
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background: rgba(0, 0, 0, 0.207); /* Fallback color for browsers that don't support backdrop-filter */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: border-bottom 0.3s ease; /* Add a transition for sticky effect */
+}
+
+.header.sticky {
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+    .logo {
+        font-size:2rem; /* You need to specify the font size value */
+        color: transparent;
+    
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer; /* Change to pointer to indicate interactivity */
+        color: #fff;
+        display: flex; /* Enable flex container */
+        align-items: center; /* Vertically center the content */
+        margin: 0 auto;
+        text-decoration: none; /* Remove underline from link */
+    }
+
+
+
+
+#menu-icon{
+    font-size: 3.3rem;
+    color: var(--text-color);
+    display: none;
+}
+body{
+    height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(45deg,  rgb(93, 3, 90), rgb(0, 0, 0)); /* Gradient background */
+    color: var(--text-color);
+background-size: 300% 300%;
+
+
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+body {
+    font-family: Arial, sans-serif;
+
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    
+}
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 5rem;
+}
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 1rem;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.container:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.container:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.container:nth-child(5) {
+    animation-delay: 4s;
+}
+
+.container:nth-child(6) {
+    animation-delay: 5s;
+}
+
+.container:nth-child(7) {
+    animation-delay: 6s;
+}
+
+
+.text-box{
+    padding: 20px 30px;
+    background: #ffffff;
+    color: #000;
+box-shadow: 0 1rem 3rem #000;
+    font-size: 1.5rem;
+    position: relative;
+    direction: rtl;
+}
+.left-container{
+    left:0;
+}
+.right-container{
+    left: 50%;
+}
+.container small{
+    font-size: 2rem;
+}
+.container i {
+    font-size: 5rem;
+    position: absolute;
+    width: 40px;
+    right: -60px;
+    top: 32px;
+    z-index: 10;
+    text-shadow: 0px 4px 4px #000 ;
+}
+.right-container i{
+    left:-80px;
+}
+.timeline::after{
+    content:'';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left:-3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards ;
+}
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.left-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: solid transparent 15px ;
+    border-bottom: solid transparent 15px;
+    border-left: 15px solid rgb(255, 255, 255);
+    right: -14px;
+
+}
+.right-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: solid transparent 15px ;
+    border-bottom: solid transparent 15px;
+    border-right: 15px solid rgb(255, 255, 255);
+    left: -14px;
+    
+}
+
+
+
+.footer {
+
+    align-items: center;
+
+    padding: 2rem 9%;
+    color: #fff;
+    background: #00000071;
+    position: relative; /* Make sure the footer is positioned relative for proper backdrop-filter application */
+}
+.footer-text p {
+    font-size: 1.6rem;
+    text-align: center;
+
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container i , .right-container i {
+        left: 10px;
+
+        width: 50px;
+        height: 50px;
+        background: #000000c2;
+        border-radius: 50%; /* Make the background circular */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem; /* Adjust the font size as needed */
+        color: #fff; /* Set icon color to white */
+        z-index: 10;
+    }
+.right-arrow{
+    border-right: 14px solid #fff;
+    border-left: 0;
+    left: -13px;
+}
+.left-arrow{
+    border-right: 14px solid #fff;
+    border-left: 0;
+    right:22.5rem;
+    
+}
+
+}
+@media (max-width:365px){
+    .home-image img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+}
+
+.portfolio h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+.portfolio-box {
+    flex: 0 0 calc(33.33% - 2.5rem);
+}
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 5rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    
+}
+.portfolio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+        
+}
+.portfolio-box:hover img{
+transform: scale(1.1);
+box-shadow: 0 3rem 3rem #000;
+
+}
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1), var(--bg-color)  );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+
+}
+
+.portfolio-layer h4{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.portfolio-layer p {
+    font-size: 2rem;
+    font-weight: 5rem;
+    margin: 0.3rem 0 1rem;
+}
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: 50%;
+}
+.portfolio-layer a i {
+    font-size: 2rem;
+    color:#000000;
+}
+@media screen and (max-width: 768px) {
+    .portfolio h2 {
+        font-size: 3rem;
+    }
+    .portfolio-container {
+        gap: 1.5rem; /* Adjust gap for smaller screens */
+        margin-bottom: 3rem; /* Adjust margin for smaller screens */
+    }
+    .portfolio-box {
+        flex-basis: calc(50% - 1.5rem); /* Display two boxes per row */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio h2 {
+        font-size: 2.5rem;
+    }
+    .portfolio-container {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .portfolio-box {
+        flex-basis: calc(100% - 1rem); /* Display one box per row */
+    }
+}
+
+
+
+

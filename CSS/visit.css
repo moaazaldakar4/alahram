@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+
+body {
+    font-family: 'Readex pro', sans-serif;
+    min-height: 100vh; /* Ensures the body takes up the full viewport height */
+    width: 100vw; /* Ensures the body takes up the full viewport width */
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* Text direction for Arabic */
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(93, 3, 90), rgb(0, 0, 0)); /* Gradient background */
+}
+
+.container {
+    margin-top: 50px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    
+    gap: 2rem; /* Space between the items */
+    margin-right: auto;
+}
+
+.search-bar {
+    width: 30%;
+    height: 70px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+    outline: none;
+}
+
+/* Placeholder styling */
+.search-bar::placeholder {
+    color: #000000a3; /* Placeholder text color */
+    opacity: 1; /* Placeholder opacity when not focused */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    font-size: 1rem;
+}
+
+
+/* On focus styling */
+.search-bar:focus {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5rem;
+    margin-bottom: 20px;
+    border-color: #272727; /* Adjust to your preferred color */
+}
+
+/* Placeholder opacity on focus */
+.search-bar:focus::placeholder {
+    opacity: 0; /* Placeholder opacity when focused */
+}
+
+
+
+
+
+
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px; /* Adds space around the ul element */
+    padding-left: 30px; /* Adds space inside the ul element from the left */
+    padding-right: 30px; /* Adds space inside the ul element from the right */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between the items */
+
+}
+
+.item-list li {
+    flex: 1 1 calc(50% - 1rem); /* Each item takes up 50% of the container width minus the gap */
+    padding: 15px;
+    background: linear-gradient(145deg, #ffffff, #ff95f1); /* Gradient with a soft diagonal transition */
+    margin-bottom: 1rem;
+    border-radius: 15px; /* Softer, more rounded corners */
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.281), 5px 5px 15px rgba(0, 0, 0,0.7); 
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease; /* Increased transition duration for smoother effects */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    color: #000000; /* Text color for contrast */
+    text-align: center; /* Center-aligns text inside the item */
+}
+
+/* Hover effect */
+.item-list li:hover {
+    transform: translateY(-5px); /* Lifts the item slightly */
+    background: linear-gradient(145deg, #ff95f1, #ffffff); /* Reverse gradient on hover */
+    box-shadow: -8px -8px 15px rgba(0, 0, 0, 0.737), 5px 5px 15px rgba(255, 255, 255, 0.281); 
+}
+
+
+@media (max-width: 600px) {
+    .item-list {
+        gap: 5rem; /* Space between the items */
+    }
+
+
+
+
+    .item-list li {
+        flex: 1 1 100%; /* Makes each item take up 100% of the container width */
+    }
+    .search-bar::placeholder {
+        color: #000000a3; /* Placeholder text color */
+        opacity: 1; /* Placeholder opacity when not focused */
+        transition: opacity 0.3s ease; /* Smooth transition */
+        font-size: 1.7rem;
+
+    }
+    .search-bar {
+        width: 60%;
+        height: 40px;
+        padding: 15px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 5rem;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        text-align: center;
+        outline: none;
+    }
+    
+}   
+
+.item-list li:hover {
+    background-color: #f0f0f0;
+}
+.item-list li p {
+    margin: 5px 0 0;
+    font-size: 1.5rem;
+    color: #000000;}
+    
+
+.action-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #000000; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.5  rem; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    transition: transform 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #9c0480; /* Change background color on hover */
+    transform: scale(1.1);
+}
+.test-name{
+    font-size: 3rem;
+    font-style: bold;
+
+}

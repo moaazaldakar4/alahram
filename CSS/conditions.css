@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+:root {
+    --bg-color: #0C3C78;
+    --second-bg-color:#04879C;
+    --text-color:#fff;
+    --main-color:#EAE7AF;
+    --second-main-color:#E2BBE9;
+
+}
+
+body {
+    font-family: 'Readex pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* Text direction for Arabic */
+    text-align: right;
+}
+section {
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 20px; /* Optional: Add some padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 10px; /* Optional: Reduce padding on very small screens */
+    }
+}
+
+header{
+    background: linear-gradient(180deg, rgb(93, 3, 90), rgb(0, 0, 0)); /* Gradient background */
+
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+   
+    
+}
+
+
+
+.header-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.header-image img {
+    width: 650px; /* Set the image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+
+
+@media (max-width: 768px) {
+    .header-image {
+        padding: 15px;
+    }
+
+    .header-image img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-image {
+        padding: 10px;
+    }
+
+    .header-image img {
+        max-width: 90%;
+    }
+}
+
+.services {
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(93, 3, 90), rgb(0, 0, 0)); /* Gradient background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem; /* Increase padding on top */
+    padding-bottom: 6rem; /* Increase padding on bottom */
+    min-height: 250vh; /* Ensure it takes full viewport height */
+}
+
+.services h2 {
+color:#fff;
+    text-align: center;
+    font-size: 4rem; /* Adjust the font size as needed */
+}
+
+.services-container {
+    display: flex;
+    margin: 10px; /* Adds space around the ul element */
+    padding-left: 20px; /* Adds space inside the ul element from the left */
+    padding-right:20px; /* Adds space inside the ul element from the right */
+    margin-top: 8rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse; /* Updated property to wrap-reverse */
+    gap: 2rem;
+}
+
+.services-container .services-box {
+    flex: 1 1 50rem; /* Reduced flex-basis to make boxes smaller */
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 2rem; /* Adjust padding to maintain proportion */
+    border-radius: 1rem;
+    text-align: center;
+    border: 0.2rem solid rgba(255, 255, 255, 0.3); /* Transparent border */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+
+    color: #fff;
+}
+
+.services-container .services-box:hover {
+    color: #000;
+    background: rgb(255, 255, 255); /* Transparent background */
+    border-color: rgb(255, 255, 255); /* Slightly more visible on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem rgb(255, 255, 255); /* Light shadow */
+}
+
+
+.services-box i {
+    font-size: 3rem;
+
+}
+
+.services-box h3 {
+    font-size: 3rem;
+}
+.services-box h4 {
+    font-size: 2rem;
+}
+
+.services-box p {
+    font-size: 0rem; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 1s ease-in-out, font-size 1s ease-in-out; /* Smooth transition */
+    margin-top: 0; /* Ensure no margin when hidden */
+}
+
+.services-box:hover p {
+    opacity: 1;
+    font-size: 1.5rem; /* Font size when visible */
+    margin-top: 1rem; /* Add space above the text */
+}
+
+
+
+
+
+.footer {
+  
+    align-items: center;
+
+    padding: 2rem 9%;
+    color: #fff;
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(93, 3, 90)); /* Gradient background */
+    position: relative; /* Make sure the footer is positioned relative for proper backdrop-filter application */
+
+}
+.footer-text p {
+    font-size: 1.6rem;
+
+}
+.footer-icontop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: #fff;
+    border-radius: 0.8rem;
+    text-decoration: none;
+}
+.footer-icontop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+.footer-icontop a i:hover {
+    transform: translateY(-0.2rem) scale(1.4);
+box-shadow: 0 0 5rem var(--main-color);
+}
+.footer-text a {
+    color: #fff;
+ font-weight: 1000;
+ font-size: 2rem;
+ 
+ 
+ }
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    .services {
+        padding-bottom: 7rem;
+        min-height: 150vh; /* Ensure it takes full viewport height */
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .home {
+        padding-bottom: 8rem;
+    }
+    .about {
+        padding-bottom: 7rem;
+    }
+    .services {
+        padding-bottom: 7rem;
+        min-height: 150vh; /* Ensure it takes full viewport height */
+    }
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size:  5rem;
+        text-align: center;
+        line-height: 1rem;
+
+    }
+    .home-content h1 {
+        font-size: 6rem;
+        text-align: center;
+    }
+    .home-content h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 80%;
+    }
+    .services{
+        width: 100%;
+        height: 100%;
+    }
+    .about-content p {
+        text-align: right; /* Align the paragraphs text to the right */
+        font-size: 1.7rem;
+        color: #fff;
+        line-height: 5rem;
+    }
+
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .portfolio h2 {
+        margin-bottom: 1rem;
+    }
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 617px) {
+        .portfolio-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .heading a {
+        display: inline-block;
+        margin-top: 1rem;
+        text-decoration: none;
+        color: var(--main-color);
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-image img {
+        width: 90vw;
+
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+
+

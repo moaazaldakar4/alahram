@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+:root {
+    --bg-color: #0C3C78;
+    --second-bg-color:#04879C;
+    --text-color:#fff;
+    --main-color:#EAE7AF;
+    --second-main-color:#E2BBE9;
+
+}
+
+body {
+    font-family: 'Readex pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* Text direction for Arabic */
+    text-align: right;
+}
+section {
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 20px; /* Optional: Add some padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 10px; /* Optional: Reduce padding on very small screens */
+    }
+}
+
+header{
+    background: linear-gradient(180deg, rgb(93, 3, 90), rgb(0, 0, 0)); /* Gradient background */
+
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+   
+    
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-top: 20px; /* Adds space above the navbar */
+ 
+}
+
+/* Navbar Links */
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adds a gap between each nav item */
+    background-color: var(--);
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    text-align: center;
+    color: #ffffffe8 !important; /* Initial text color */
+    background-color: transparent; /* Initial background color */
+    position: relative; /* Needed for the animated line */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    font-size: 25px; /* Text size for nav links */
+    font-weight: bold; /* Makes the text bold */
+    padding: 4px 8px; /* Adjust padding for better spacing */
+}
+
+.navbar-nav .nav-link.active::before {
+    transform: scaleX(1); /* Keeps the line visible */
+}
+
+.navbar-nav .nav-link::before {
+    content: ''; /* Creates the line above the element */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px; /* Thickness of the line */
+    background-color: rgb(255, 255, 255); /* Color of the line */
+    transform: scaleX(0); /* Initially hide the line */
+    transition: transform 0.3s ease; /* Smooth transition for the line */
+}
+
+
+.navbar-nav .nav-link:hover::before {
+    transform: scaleX(1); /* Show the line on hover */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.252); /* Darker background color on hover */
+}
+
+
+/* Dropdown Menu */
+/* General Styles for Dropdown Menu */
+.dropdown-menu {
+    position: absolute; /* Position the dropdown menu absolutely */
+    top: 100%; /* Position it directly below the triggering element */
+    left: 0; /* Align it with the left edge of the triggering element */
+    text-align: center; /* Center align dropdown items */
+    display: none; /* Hide the dropdown menu initially */
+    background: white; /* Set background color */
+    border: 1px solid black; /* Add border for better visibility */
+    border-radius: 5px; /* Optional: rounded corners */
+    z-index: 1000; /* Ensure the dropdown appears above other content */
+    width: 100%; /* Optional: make dropdown full width */
+}
+
+/* Show dropdown menu when the parent is hovered */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu */
+}
+
+/* Dropdown Items */
+.dropdown-menu .dropdown-item {
+    font-size: 20px;
+    border: none; /* Remove border if not needed */
+    padding: 10px 20px; /* Add padding for better spacing */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    display: block; /* Ensure items are block-level for stacking */
+}
+
+/* Hover Effect for Dropdown Items */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static; /* Reset positioning for smaller screens */
+        width: 100%; /* Make dropdown full width on small screens */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */
+    }
+}
+
+/* Custom Toggler Icon Color and Size */
+.navbar-toggler {
+    border: none; /* Remove border around the toggler */
+    padding: 0.5rem; /* Adjust padding to increase the clickable area */
+}
+
+
+
+/* Default Menu Icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' %3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M4 6h16M4 12h16m-7 6h7' /%3E%3C/svg%3E");
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.header-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.header-image img {
+    width: 650px; /* Set the image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+
+
+@media (max-width: 768px) {
+    .header-image {
+        padding: 15px;
+    }
+
+    .header-image img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-image {
+        padding: 10px;
+    }
+
+    .header-image img {
+        max-width: 90%;
+    }
+}
+.home {
+    position: relative; /* Position the container relative to its content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    overflow: hidden; /* Ensure no content spills out */
+    background-attachment: fixed; /* Keeps the background image in place when scrolling */
+}
+
+/* Pseudo-element for the blurred background */
+.home::before {
+    content: ''; /* Creates an empty pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.corinthiantravel.co.uk/blog/wp-content/uploads/2016/07/Everything-you-need-to-know-when-visiting-the-Pyramids-in-Cairo-Egypt.jpg);
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background image in place when scrolling */
+    filter: blur(10px); /* Apply the blur effect to the background image */
+    z-index: 1; /* Ensure the blur is behind the content */
+    animation: color 10s ease-in-out infinite;
+}
+@keyframes color {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* Pseudo-element for the dark overlay */
+.home::after {
+    content: ''; /* Creates an empty pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 00.6); /* Black color with 50% opacity */
+    z-index: 2; /* Ensure the overlay is above the blur but below the content */
+}
+
+/* Foreground content to be clear and visible */
+.home-content,
+.home-image {
+    position: relative; /* Ensure content is above the blur and overlay */
+    z-index: 3; /* Place content above the blurred background and overlay */
+    color: #ffffff; /* Set the text color */
+}
+
+.home-image img {
+    animation: floatImage 4s ease-in-out infinite;
+    width:350px;
+    margin-top: 5rem;
+    margin-right: 2rem; /* Add margin to place the image on the left */
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Example styles for your content */
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    text-align: right;
+    margin-top: 5rem;
+}
+
+.home-content h2 {
+    font-size: 2rem;
+    color: #0ef;
+    text-align: right;
+    margin-top: 5rem;
+}
+
+
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #ffffff;
+    border-radius: 2rem;
+    box-shadow: none;
+    font-size: 2rem;
+    color: #000000;
+    font-weight:600;
+    transition: 0.5s ease;
+    margin: 2rem 1.5rem 2rem 0;
+}
+
+
+.btn:hover{
+    box-shadow: 0 0 3rem #f30aeb;
+    background: #ffffff;
+    color:#f30aeb ;
+transform: scale(1.1);
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(360deg, rgb(90, 8, 94), rgb(0, 0, 0)); /* Gradient background */
+    direction: rtl; /* Set the text direction to right-to-left */
+}
+
+
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    color: #fff;
+}
+
+.about-content {
+    /* Set the text direction to right-to-left */
+    direction: rtl;
+}
+
+.about-content h2 {
+    text-align: right; /* Align the h2 text to the right */
+    line-height: 1.2;
+    margin-bottom: 5rem;
+    font-size: 5rem; /* You can adjust the font size as needed */
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    text-align: center;
+    color: #fff; /* Align the h3 text to the right */
+}
+
+.about-content p {
+    text-align: right; /* Align the paragraphs text to the right */
+    font-size: 1.7rem;
+    color: #fff;
+    line-height: 5rem;
+}
+.services {
+    background: linear-gradient(180deg, rgb(90, 8, 94), rgb(0, 0, 0)); /* Gradient background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem; /* Add some padding to the top */
+    padding-bottom: 5rem; /* Add padding to the bottom */
+}
+
+.services h2 {
+
+    text-align: center;
+    font-size: 3rem; /* Adjust the font size as needed */
+}
+
+.services-container {
+    display: flex;
+    margin-top: 8rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse; /* Updated property to wrap-reverse */
+    gap: 2rem;
+}
+
+.services-container .services-box {
+    flex: 1 1 20rem; /* Reduced flex-basis to make boxes smaller */
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 2rem; /* Adjust padding to maintain proportion */
+    border-radius: 10rem;
+    text-align: center;
+    border: 0.2rem solid rgba(255, 255, 255, 0.3); /* Transparent border */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+
+    color: #fff;
+}
+
+.services-container .services-box:hover {
+    color: #000;
+    background: rgb(255, 255, 255); /* Transparent background */
+    border-color: rgb(255, 255, 255); /* Slightly more visible on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem rgb(255, 255, 255); /* Light shadow */
+}
+
+
+.services-box i {
+    font-size: 3rem;
+
+}
+
+.services-box h3 {
+    font-size: 1.5rem;
+}
+
+.services-box p {
+    font-size: 1rem;
+}
+
+
+.footer {
+  
+    align-items: center;
+
+    padding: 2rem 9%;
+    color: #fff;
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(93, 3, 90)); /* Gradient background */
+    position: relative; /* Make sure the footer is positioned relative for proper backdrop-filter application */
+
+}
+.footer-text p {
+    font-size: 1.6rem;
+
+}
+.footer-icontop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: #fff;
+    border-radius: 0.8rem;
+    text-decoration: none;
+}
+.footer-icontop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+.footer-icontop a i:hover {
+    transform: translateY(-0.2rem) scale(1.4);
+box-shadow: 0 0 5rem var(--main-color);
+}
+.footer-text a {
+    color: #fff;
+ font-weight: 1000;
+ font-size: 2rem;
+ 
+ 
+ }
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .home {
+        padding-bottom: 8rem;
+    }
+    .about {
+        padding-bottom: 7rem;
+    }
+    .services {
+        padding-bottom: 7rem;
+    }
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size:  5rem;
+        text-align: center;
+        line-height: 1rem;
+
+    }
+    .home-content h1 {
+        font-size: 6rem;
+        text-align: center;
+    }
+    .home-content h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 80%;
+    }
+    .services{
+        width: 100%;
+        height: 100%;
+    }
+    .about-content p {
+        text-align: right; /* Align the paragraphs text to the right */
+        font-size: 1.7rem;
+        color: #fff;
+        line-height: 5rem;
+    }
+
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .portfolio h2 {
+        margin-bottom: 1rem;
+    }
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 617px) {
+        .portfolio-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .heading a {
+        display: inline-block;
+        margin-top: 1rem;
+        text-decoration: none;
+        color: var(--main-color);
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-image img {
+        width: 90vw;
+
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
