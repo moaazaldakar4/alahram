@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معمل الأهرام</title>
+    <meta name="description" content="Description of your site">
+    <!-- Box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="icon" type="image/png" href="Media/Clipped_image_20240816_150804.png"/>
+</head>
+<body>
+    <header>
+        <div class="header-image">
+            <a href="index.html" class="header-image">
+                <img src="Media/Your_paragraph_text-removebg-preview.png" alt="صورة كبيرة">
+            </a>
+        </div>
+    </header>
+
+<section id="section-wrapper" >
+    <div class="info-wrap" >
+            <h2 class="info-title" >تواصل معنا</h2>
+
+            <ul class="info-details" >
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://maps.app.goo.gl/1DR84R5xp67USfEW9">المحموديه . شارع سيراميكا كيلوباترا . دار الاشعه.(د.عفيفي). امام كوين سنتر</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:drrashemara@gmail.com">drrashemara@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <a href="tel:+201021511115">01097515107</a>
+                </li>
+            </ul>
+            <ul class="social-icons" >
+                <li>
+                    <a href="https://www.facebook.com/LABALAHRAM">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/+201097515107">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+    </div>
+    <div class="form-wrap">
+        <form id="contactForm" action="#" method="post">
+            <h2 class="form-title">أرسل لنا رسالة</h2>
+            <div class="form-fields">
+                <div class="form-group">
+                    <input type="text" class="name" placeholder="الأسم" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="phone" placeholder="رقم الهاتف" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="اكتب رسالتك" id="message" required></textarea>
+                </div>
+            </div>
+            <input type="submit" value="إرسال" class="submit-button">
+        </form>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                    // Prevent the default form submission
+                    event.preventDefault();
+    
+                    // Get form values
+                    const name = document.querySelector('.name').value.trim();
+                    const phone = document.querySelector('.phone').value.trim();
+                    const message = document.getElementById('message').value.trim();
+    
+                    // Validate form fields
+                    if (name === '' || phone === '' || message === '') {
+                        alert('يرجى ملء جميع الحقول');
+                        return;
+                    }
+    
+                    // Construct WhatsApp URL
+                    const encodedMessage = encodeURIComponent(message);
+                    const whatsappUrl = `https://wa.me/+2001097515107?text=${encodedMessage}`;
+    
+                    // Redirect to WhatsApp
+                    window.location.href = whatsappUrl;
+                });
+            });
+        </script>
+    </div>
+    
+        </form>
+    </div>
+
+</section>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        <p>جميع الحقوق محفوظة © 2024 || معمل الأهرام للتحاليل الطبية </p>
+    </div>
+    </div>
+</footer>
+
+
+<script src="JS/script.js" ></script>
+
+</body>
+</html>

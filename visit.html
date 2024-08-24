@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معمل الأهرام</title>
+    <meta name="description" content="Description of your site">
+    <!-- Box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/visit.css">
+    <link rel="icon" type="image/png" href="Media/Clipped_image_20240816_150804.png"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+</head>
+<header>
+    <div class="header-image">
+        <a href="index.html" class="header-image">
+            <img src="Media/Your_paragraph_text-removebg-preview.png" alt="صورة كبيرة">
+        </a>
+    </div>
+</header>
+    <body>
+        <h2 class="heading"> اختر التحليل</h2>
+        <div class="container">
+            
+            <input type="text" id="searchBar" class="search-bar" placeholder="ابحث عن التحليل">
+
+        </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const searchBar = document.getElementById('searchBar');
+                    const itemList = document.getElementById('itemList');
+                    const items = itemList.getElementsByTagName('li');
+        
+                    searchBar.addEventListener('keyup', function() {
+                        const filter = searchBar.value.toLowerCase();
+                        
+                        for (let i = 0; i < items.length; i++) {
+                            let item = items[i];
+                            let header = item.getElementsByTagName('h3')[0];
+                            let text = header ? header.textContent || header.innerText : '';
+                            
+                            if (text.toLowerCase().indexOf(filter) > -1) {
+                                item.style.display = '';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            </script>
+    <ul id="itemList" class="item-list">
+        <li>
+            <h3 class="test-name">VMA</h3>
+            <p>يتم جميع بول 24 ساعه فى عبوه مخصصة من المعمل...</p>
+            <a class="whatsapp-link" href="#" target="_blank">
+                <button class="action-button">احجز الأن</button>
+            </a>
+        </li>
+        <li>
+            <h3 class="test-name">Valproic acid (Depakene) Trough level</h3>
+            <p>يتم جميع بول 24 ساعه فى عبوه مخصصة من المعمل...</p>
+            <a class="whatsapp-link" href="#" target="_blank">
+                <button class="action-button">احجز الأن</button>
+            </a>
+        </li>
+
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select all links with the class "whatsapp-link"
+        var links = document.querySelectorAll(".whatsapp-link");
+    
+        links.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                // Prevent the default action
+                event.preventDefault();
+    
+                // Find the closest <li> ancestor and then find the <h3> within it
+                var testName = this.closest("li").querySelector(".test-name").innerText;
+                var message = encodeURIComponent("I want to book a test for " +"'  "+ testName+"  '");
+                var phoneNumber = "+201021511115"; // Make sure the phone number is correct
+                var whatsappUrl = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + message;
+    
+                // Set the href attribute of the link and then simulate a click
+                this.href = whatsappUrl;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    });
+    </script>
+        
+    <li>
+        <h3 class="test-name">Valproic acid (Depakene) peek level</h3>
+        <p>يتم سحب عينة الدم خلال 2 الى 4 ساعات من تناول الجرعة</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>
+    <li>
+        <h3 class="test-name">Total Metanephrine</h3>
+        <p>يتم تجميع بول 24 ساعة:
+            يتم أخذ وعاء خاص من المعمل ا يحتوي على مواد حافظة.
+            يجب علي المريض البدأ في تجميع البول في وقت معين من اليوم (على سبيل المثال: فور القيام من النوم 8 صباحا) ويجب عليه ان يسجل ساعة التجميع (الوقت الذى بدأ فيه التجميع) ثم يتم التخلص من العينة الأولى من بدء التجميع.
+            يقوم المريض بتجميع العينات فيما بعد بعناية في الوعاء المخصص لذلك، مع الحرص على عدم فقدان أي عينة او جزء منها حتى اليوم الثاني , بالضبط بعد 24 ساعة من وقت بدء التجميع ( الساعة 8 ص اليوم التالي).
+            يفضل أن يبقى الوعاء في الثلاجة خلال فترة التجميع وبعد الانتهاء منه حتى تصل إلى المعمل.
+            يجب أن تصل العينة الي المعمل خلال ساعتين كحد أقصى من الانتهاء من التجميع.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Scotch Tape Test</h3>
+        <p>( يستخدم هذا الاختبار لتشخيص الدودة الدبوسية في الاطفال) يجب حضور المريض مبكرا الى المعمل قبل دخول الحمام . يتم أخذ المسحة من حول الشرج باستخدام الشريط اللاصق ثم يتم لصقه على الشريحة المراد فحصها.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Renin activity</h3>
+        <p>يقوم المريض بالراحة لمدة 30 دقيقة ويجب التوقف عن تناول ادوية الضغط-ا الادوية المدرة للبول-لعرق سوس وكذلك الامتناع عن التدخين و يتم سحب العينة في الصباح الباكر قبل الساعة ال 10 صباحاً.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Reducing substances in urine</h3>
+        <p>يجب احضار العينة بالمعمل او ارسالها في خلال نصف ساعة.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Reducing substances in stool	</h3>
+       <p>يجب احضار العينة بالمعمل او ارسالها في خلال نصف ساعة.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Protein S</h3>
+        <p>يجب ايقاف عقار ( الماريفان) لمدة اسبوع قبل التحليل كذلك ايقاف الهيبارين لمدة يومين قبل التحليل ان وجد.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Protein C</h3>
+        <p>يجب ايقاف عقار ( الماريفان) لمدة اسبوع قبل التحليل كذلك ايقاف الهيبارين لمدة يومين قبل التحليل ان وجد.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Phenytoin (Epanutin, Epilog, Dilantin) Trough level	</h3>
+        <p>يتم سحب عينة الدم قبل تناول الجرعة مباشرةً</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Phenytoin (Epanutin, Epilog, Dilantin) Peak level	</h3>
+        <p>يتم سحب عينة الدم خلال 4 الى 6 ساعات من تناول الجرعة</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">OGTT 75-g</h3>
+        <p>تحليل منحنى السكر(خطوة أولى): يتم سحب عينة دم بعد صيام 8 -10 ساعات يتبعها تناول 75 جرام جلوكوز ثم يتم سحب عينات الدم كل ساعة ولمدة ساعتين فقط ( السيدات الحوامل تم عمل هذا التحليل في الاسبوع 24-28 من الحمل).</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">OGTT 100-g</h3>
+        <p>منحنى السكر للحوامل الخطوة الثانية (تأكيدى) : يتم سحب عينة السكر الصائم بعد صيام 8 -10 ساعات ثم يتم تناول 100 جرام جلوكوز وسحب عينات دم كل ساعة ولمدة ثلاث ساعات متتالية ( يتم عمل هذا التحليل في الاسبوع 24-28 من الحمل).</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Lupus anticoagulants</h3>
+        <p>يجب ايقاف عقار ( الماريفان) لمدة اسبوع قبل التحليل كذلك ايقاف الهيبارين لمدة يومين قبل التحليل ان وجد.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Lipid profile</h3>
+        <p>يشترط الصيام (عقب صيام الليل) من 10 الى 12 ساعه والامنتاع عن التدخين ان وجد (فقط ييمكن شرب الماء).</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Insulin P.P	</h3>
+        <p>بعد صيام 10-12 ساعه ثم يتناول الإفطار الطبيعي في 10-15 دقيقة ثم يتم سحب عينة الدم بعد ساعتين من بداية تناول الطعام ولايسمح بالأكل خلال الساعتين.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Insulin Fasting</h3>
+        <p>يشترط الصيام (عقب صيام الليل) من 10 الى 12 ساعه.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">HOMA2- IR</h3>
+        <p>يشترط الصيام (عقب صيام الليل) من 8 الى 10 ساعه.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Growth hormone (after exercise)	</h3>
+        <p>يشترط صيام الليل 10-12 ساعه و فى الصباح يقوم المريض بتسلق السلالم سريعا لمدة 20 دقيقة و يتم سحب عينة دم بعد هذا التمرين مباشرة أو يتم اخذ جرعة ( Clonidine ) على حسب الوزن ويتم سحب عينة دم بعد 30 و 60 و 90 دقيقة.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">Growth hormone</h3>
+        <p>يتم سحب عينة الدم خلال 2 الى 4 ساعات من تناول الجرعة</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>    <li>
+        <h3 class="test-name">G6PD</h3>
+        <p>يجب الا يتم عمل االتحليل اثناء الاعراض او بعد الانتهاء منها مباشرة على الأقل بعد ثلاثة أسابيع من حدوث الإنتكاسة</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>
+    <li>
+        <h3 class="test-name">FSH</h3>
+        <p>جب اخذ العينة في اليوم الثاني او الثالث للدورة أو حسب ارشادات الطبيب المعالج و يجب ايضاح اي يوم في الدوره تم فيه سحب العينه .</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> <li>
+        <h3 class="test-name">FibroMAX test</h3>
+        <p>يشترط الصيام مدة 12 ساعة</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> <li>
+        <h3 class="test-name">Fasting blood glucose</h3>
+        <p>يشترط الصيام (عقب صيام الليل) من 8 الى 10 ساعات.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> <li>
+        <h3 class="test-name">CPK (CK total)</h3>
+        <p>حقن العضل والتمرينات الرياضية تزيد من معدلات هذا الانزيم لذا يجب تفاديها.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> <li>
+        <h3 class="test-name">Cortisol PM</h3>
+        <p>يتم سحب عينة دم من الساعة 8 الى 9 مساءاً</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> <li>
+        <h3 class="test-name">Cortisol AM</h3>
+        <p>يتم سحب عينة دم من الساعة 8 الى 9 صباحاً</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> <li>
+        <h3 class="test-name">Catecholamines (Adrenaline and nor adrenaline)	</h3>
+        <p>بعد صيام الليل و حتي السحب في الصباح الباكر حيث يقوم المريض بالراحة لمدة 30 دقيقة في هدوء مع ايقاف بعض الادوية ( قطرات الانف، الجيوب الانفية،عقاقيرالكحة، موسعات الشعب الهوائية،او مثبطات الشهية, ادوية الاكتئاب, ادوية القلب و ادوية ارتفاع ضغط الدم “alpha methyl dopa” بعد سماح الطبيب المعالج) وذلك لمدة اسبوع قبل سحب العينة يلاحظ اهمية سحب هذا التحليل مباشرة بعد او اثناء نوبات ارتفاع ضغط الدم .</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> <li>
+        <h3 class="test-name">CASA</h3>
+        <p>يمتنع المريض عن الجماع أو نزول السائل المنوى من جسمة لمدة 3-7 ايام كما يشترط تجميع العينة كاملة في الوعاء المخصص لذلك.بالمعمل وفى حال احضار العينة خارج المعمل يجب ان تنقل العينة الى المعمل في مدة لا تزيد عن 15 دقيقة في درجه حراره الجسم.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li>
+    <li>
+        <h3 class="test-name">Carbamazepine (Tegretol) Trough level	</h3>
+        <p>يتم سحب عينة الدم قبل تناول الجرعة مباشرةً</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">Carbamazepine (Tegretol) Peak level	</h3>
+        <p>يتم سحب عينة الدم خلال 4 الى 8 ساعات من تناول الجرعة</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">C-peptide P.P</h3>
+        <p>عقب صيام الليل من 8 الى 12 ساعة يتم تناول 75 جرام جلوكوز او وجبة غذائية متكاملة ويجب على المريض الانتهاء من الوجبة في مدة 10-15 دقيقة ثم يتم سحب عينة الدم بعد ساعتين من بداية تناول الجرعة أو الطعام ولايسمح بالأكل خلال الساعتين.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">C-peptide Fasting</h3>
+        <p>عقب صيام الليل من 8 الى 12 ساعة يتم أخذ عينة دم صايم صباحاُ.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">Blood glucose 2hr 75-g GLT	</h3>
+        <p>يتم سحب عينة دم بعد صيام 8 ساعات على الأقل يتبعها تناول 75 جرام جلوكوز ثم يتم أخذ عينة دم بعد ساعتين فقط من تناول الجلوكوز ولا يسمح بالأكل أثناء الساعتين.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">Blood glucose 1hr 50-g GLT	</h3>
+        <p>يتم تناول 50 جم جلوكوز ثم سحب عينة دم بعد ساعة ويمكن عمله بدون الحاجة للصيام ( يتم عمل هذا التحليل في الاسبوع 24-28 من الحمل).</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">Aldosterone / Renin ratio</h3>
+        <p>يقوم المريض بالراحة لمدة 30 دقيقة ويجب التوقف عن تناول ادوية الضغط-ا الادوية المدرة للبول-لعرق سوس وكذلك الامتناع عن التدخين و يتم سحب العينة في الصباح الباكر قبل الساعة ال 10 صباحاً.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">Aldosterone</h3>
+        <p>يقوم المريض بالراحة لمدة 30 دقيقة ويجب التوقف عن تناول ادوية الضغط-ا الادوية المدرة للبول-العرق سوس وكذلك الامتناع عن التدخين و يتم سحب العينة في الصباح الباكر قبل الساعة ال 10 صباحاً.</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">ACTH PM	</h3>
+        <p>يتم سحب عينة دم من الساعة 8 الى 9 مساءاُ</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">ACTH AM</h3>
+        <p>عقب صيام الليل من 8 الى 12 ساعة يتم أخذ عينة دم صايم من الساعه 8 الى 9 صباحاً</p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+    <li>
+        <h3 class="test-name">2hr P.P blood glucose	</h3>
+        <p>يتم سحب عينة دم بعد صيام 8 ساعات على الأقل يتبعها تناول 75 جرام جلوكوز ثم يتم أخذ عينة دم بعد ساعتين فقط من تناول الجلوكوز ولا يسمح بالأكل أثناء الساعتين.
+        </p>
+        <a class="whatsapp-link" href="#" target="_blank">
+            <button class="action-button">احجز الأن</button>
+        </a>
+    </li> 
+</ul>
+
+    </div>
+    <script src="JS/script.js" ></script>
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.heading', {
+            reset: false, // Set to true if you want the element to reappear on scroll back up
+            distance: '10px', // Distance the element travels during the reveal
+            duration: 1500, // Duration of the animation in milliseconds
+            delay: 0, // Delay before the animation starts
+            easing: 'ease', // Easing function for the animation
+            opacity:0, // Initial opacity of the element (for fade-in effect)
+        });
+        
+        ScrollReveal().reveal('.item-list li', {
+            reset: false, // Set to true if you want the element to reappear on scroll back up
+            distance: '100px', // Distance the element travels during the reveal
+            duration: 2000, // Duration of the animation in milliseconds
+            delay: 0, // Delay before the animation starts
+            easing: 'ease', // Easing function for the animation
+            opacity: 1, // Initial opacity of the element (for fade-in effect)
+        });
+    </script>
+</body>
+
+</html>
