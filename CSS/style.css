@@ -333,6 +333,7 @@ transform: scale(1.1);
     gap: 2rem;
     background: linear-gradient(360deg, rgb(90, 8, 94), rgb(0, 0, 0)); /* Gradient background */
     direction: rtl; /* Set the text direction to right-to-left */
+    padding: 2rem;
 }
 
 
